@@ -1,0 +1,34 @@
+name: ❓ Ask a question / get help
+description: Help with installing, controls, scoring or anything else about Wild Seasons.
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the [existing requests](https://github.com/BadRianDev/WildSeasons/issues?q=is%3Aissue) first. Your question may already be answered.
+        This form is **public**. Please don't include personal information such as your email address, phone number, home address or TV serial number.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Installing / launching the app
+        - Controls / remote
+        - Scoring / levels
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: tv-model
+    attributes:
+      label: TV model (optional)
+      placeholder: OLED55C3
+    validations:
+      required: false

@@ -1,0 +1,72 @@
+name: 🐞 Report a bug
+description: Something in Wild Seasons isn't working as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Wild Seasons! This form is **public**. Please don't include personal information such as your email address, phone number, home address or TV serial number.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected to happen.
+      placeholder: When I shoot the fish in summer, the game freezes...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the Summer season
+        2. ...
+    validations:
+      required: false
+  - type: dropdown
+    id: season
+    attributes:
+      label: Season / screen
+      options:
+        - Title / menu
+        - Spring
+        - Summer
+        - Autumn
+        - Winter
+        - End of season / victory screen
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: remote
+    attributes:
+      label: Remote used
+      options:
+        - Magic Remote (pointer)
+        - Standard remote (arrow keys)
+        - Other / not sure
+    validations:
+      required: false
+  - type: input
+    id: tv-model
+    attributes:
+      label: TV model and webOS version
+      description: Found under Settings → General → About this TV. Model only, not the serial number.
+      placeholder: OLED55C3, webOS 23
+    validations:
+      required: false
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: "1.0.0"
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Photos or screenshots of the screen are welcome. Drag them into this box.
+    validations:
+      required: false

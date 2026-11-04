@@ -1,0 +1,37 @@
+:root {
+  --bg: #20140a;
+  --panel: #2e1f10;
+  --text: #f6ecd9;
+  --muted: #cdbb9c;
+  --accent: #ffd23a;
+  --green: #7dff5a;
+  --link: #ffcf66;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg) linear-gradient(180deg, #2f6b2a 0, #20140a 320px) no-repeat;
+}
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+header { padding-top: 36px; text-align: center; }
+header .logo { font: 900 48px "Arial Black", Arial, sans-serif; color: var(--accent); text-shadow: 3px 3px 0 #5a2a0a; margin: 0; text-decoration: none; }
+header p { color: var(--muted); margin: 6px 0 0; }
+nav { margin: 22px 0 8px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+nav a { padding: 8px 16px; border-radius: 999px; background: rgba(0, 0, 0, 0.35); color: var(--text); text-decoration: none; font-weight: 600; }
+nav a[aria-current="page"], nav a:hover { background: var(--accent); color: #2a1a06; }
+main { background: var(--panel); border-radius: 18px; padding: 28px 32px; margin-top: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
+h1 { color: var(--accent); margin-top: 0; }
+h2 { color: var(--green); margin-top: 1.8em; font-size: 1.25em; }
+a { color: var(--link); }
+.muted { color: var(--muted); font-size: 0.95em; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+.card { display: block; padding: 18px; border-radius: 14px; background: rgba(0, 0, 0, 0.28); color: var(--text); text-decoration: none; border: 2px solid transparent; }
+.card:hover, .card:focus { border-color: var(--accent); }
+.card strong { display: block; font-size: 1.1em; color: var(--accent); margin-bottom: 4px; }
+.note { border-left: 4px solid var(--accent); background: rgba(0, 0, 0, 0.25); padding: 10px 16px; border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); vertical-align: top; }
+footer { text-align: center; color: var(--muted); font-size: 0.9em; padding: 26px 20px 40px; }
